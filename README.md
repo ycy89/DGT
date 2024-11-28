@@ -35,7 +35,7 @@ This repo focuses on the debias problem of explicit feedback-based sequential re
 ## Project Structure
 ```bash 
 ├── README.md                                 Read me file 
-├── Dataset                                   dataset processing
+├── Dataset                                   dataset processed
 ├── all_models                                models 
 ├── argparser.py                              arguement definition
 ├── main_pro.py                               main script for the proposed method
