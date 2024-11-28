@@ -35,11 +35,11 @@ This repo focuses on the debias problem of explicit feedback-based sequential re
 ## Project Structure
 ```bash 
 ├── README.md                                 Read me file 
-├── Dataset                                   dataset processed
+├── Dataset                                   dataset processing
 ├── all_models                                models 
 ├── argparser.py                              arguement definition
 ├── main_pro.py                               main script for the proposed method
-├── data_loader.py                            data loader
+├── data_loader.py                            data loader for graph-based recommendation
 ├── data_loader_seq.py                        data loader for sequential recommendation
 ├── main_single.py                            baseline methods 
 ├── train_pro.py                              training procedure of the proposed method 
