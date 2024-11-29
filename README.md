@@ -30,9 +30,9 @@ This repo focuses on the debias problem of explicit feedback-based sequential re
 ```bash 
 ├── README.md                                 Read me file 
 ├── Dataset                                   dataset processing code
-├── Datasets                                 datasets that have been processed
+├── Datasets                                  datasets that have been processed
 ├── all_models                                models (our model and most of the baselines)
-├── other baselines                         DCRec, HTSR, SDHID
+├── some baselines                          DCRec, HTSR, SDHID
 ├── argparser.py                              argument definition
 ├── main_pro.py                               main script for the proposed method
 ├── data_loader.py                            data loader
