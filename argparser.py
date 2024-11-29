@@ -7,9 +7,9 @@ import numpy as np
 def arg_parser_single():
     parser = argparse.ArgumentParser('train entrance')
     # ===== Data related parameters =================
-    parser.add_argument('--main_path', type=str, default='/ceph/11329/chain/DHIN_Debias/datasets')
+    parser.add_argument('--main_path', type=str, default='./')
     # parser.add_argument('--result_path', type=str, default='/ceph/11329/chain/DHIN_Debias/result')
-    parser.add_argument('--dataset', type=str, default='cd', help='movie, cd, book')
+    parser.add_argument('--dataset', type=str, default='beauty', help='movie, cd, book')
     parser.add_argument('--n_run', type=int, default=3, help='repeat times of the same setting')
     parser.add_argument('--method', type=str, default='seq', help='model types: seq, trad, graph, debias')
     parser.add_argument('--model', type=str, default='MF_rate',
@@ -50,6 +50,7 @@ def arg_parser_single():
                         help='show bar plot of tqdm')
     parser.add_argument('--ps_alpha', type=float, default=0.2,
                         help='ps alpha')
+    # parser.add_argument('--device', type=str, default='cuda:0')
     n_users = {"cd": 26193 + 1, "movie": 40593 + 1, "book": 218106 + 1,
                "sport": 93233 + 1, "beauty": 5925 + 1, "music": 7471 + 1}
     n_items = {"cd": 63592 + 1, "movie": 49848 + 1, "book": 365641 + 1,

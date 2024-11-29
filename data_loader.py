@@ -481,10 +481,10 @@ class NeighborFinder_HIN:
         result = {
             "nid": np.zeros((num_src, num_neighbors)).astype(np.int32),
             "ts": np.zeros((num_src, num_neighbors)).astype(np.int32),
-            "rating": np.zeros((num_src, num_neighbors)).astype(np.float),
+            "rating": np.zeros((num_src, num_neighbors)).astype(np.float32),
             'n_type': np.zeros((num_src, num_neighbors)).astype(np.int16),
             "n_pop": np.zeros((num_src, num_neighbors)).astype(np.int16),
-            "ps_score": np.ones((num_src, num_neighbors)).astype(np.float)
+            "ps_score": np.ones((num_src, num_neighbors)).astype(np.float32)
         }
 
         for i, (src_idx, src_type, cut_time) in enumerate(zip(src_idx_l, src_type_l, cut_time_l)):  # para

@@ -44,7 +44,7 @@ def show_parameters(model_tmp, logger_t):
 
 def get_loader(args_t, stage='train'):
     data_path = os.path.join(args_t.data_path, f'amazon-{args_t.dataset}')
-    filename = os.path.join(data_path, "user_seq2.csv")
+    filename = os.path.join(data_path, "user_seq.csv")
     file_pop = os.path.join(data_path, "node_pop.pickle")
     rate_prob_file = os.path.join(data_path, "rate_dict.pickle")
     num_node = {"user": args_t.n_user, "item": args_t.n_item}
@@ -112,8 +112,8 @@ if __name__ == "__main__":
     if args.train == "train" and os.path.isdir(out_main):
         shutil.rmtree(out_main)
     if not os.path.isdir(out_main):
-        os.mkdir(out_main)
-        os.mkdir(f"{out_main}/checkpoint")
+        os.makedirs(out_main, exist_ok=True)
+        os.makedirs(f"{out_main}/checkpoint", exist_ok=True)
     # logger_file = f"{args.result_path}/{args.dataset}/{args.method}_{args.prefix}_{args.n_run}"
     logger = get_logger(out_main, args.train)  # "train", "continue", "test
     # Model setup

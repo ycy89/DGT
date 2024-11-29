@@ -1,13 +1,7 @@
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
--->
 
 <!-- PROJECT LOGO -->
 <br />
-  <h3 align="center">Debias Cross-Domain Sequential Recommendation</h3>
+  <h3 align="center">DGT: Unbiased Sequential Recommendation via Disentangled Graph Transformer </h3>
 
 <!-- TABLE OF CONTENTS -->
 <!--<details open="open">-->
@@ -35,27 +29,29 @@ This repo focuses on the debias problem of explicit feedback-based sequential re
 ## Project Structure
 ```bash 
 ├── README.md                                 Read me file 
-├── Dataset                                   dataset processing
+├── Dataset                                   dataset processing code
+├── Datasets                                 datasets that have been processed
 ├── all_models                                models 
-├── argparser.py                              arguement definition
+├── argparser.py                              argument definition
 ├── main_pro.py                               main script for the proposed method
-├── data_loader.py                            data loader for graph-based recommendation
+├── data_loader.py                            data loader
 ├── data_loader_seq.py                        data loader for sequential recommendation
 ├── main_single.py                            baseline methods 
 ├── train_pro.py                              training procedure of the proposed method 
 ├── utils.py                                  utils such as early stop function
-├── README.md                                 readme file
 └── .gitignore                                gitignore file
 ```
 
 <!-- USAGE -->
 ## Usage
+Download datasets and run the following commands:
+```commandline
+python main_pro.py --method pro --model GNN_rate --prefix GNN_rate_128_V2 --dataset "cd" --epoch 100 --bs 1024 --train train --latent_dim 128 --lr 0.001 --wd 0 --bar False --n_channels 2 --n_layers 1 --version 2
+```
 ```commandline
 python main_single.py --method trad --model MF_rate --prefix MF_rate_64 --dataset cd --epoch 100 --bs 1024 --train train --latent_dim 64    
-
-python main_pro.py --method pro --model GNN_rate --prefix GNN_rate_128_V2 --dataset "cd" --epoch 100 --bs 1024 --train train --latent_dim 128 --lr 0.001 --wd 0 --bar False --n_channels 2 --n_layers 1 --version 2 --main_path "/cfs/cfs-a769xugn/chenglin/DHIN_Debias"
 ```
 Find details about the arguments in argparser.py 
 
-## Dataset 
+## Raw Datasets
 Amazon datasets: CD, Movie, Sport, Music, Beauty (https://jmcauley.ucsd.edu/data/amazon/)
