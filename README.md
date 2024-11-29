@@ -45,7 +45,7 @@ This repo focuses on the debias problem of explicit feedback-based sequential re
 
 <!-- USAGE -->
 ## Usage
-To perfrom our proposed  method, please run the following command (Find details about the arguments in argparser.py) :
+To perfrom our proposed  method, please run the following command (find details about the arguments in argparser.py) :
 ```commandline
 python main_pro.py --method pro --model GNN_rate --prefix GNN_rate_128_V2 --dataset "cd" --epoch 100 --bs 1024 --train train --latent_dim 128 --lr 0.001 --wd 0 --bar False --n_channels 2 --n_layers 1 --version 2
 ```
