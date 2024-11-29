@@ -31,7 +31,8 @@ This repo focuses on the debias problem of explicit feedback-based sequential re
 ├── README.md                                 Read me file 
 ├── Dataset                                   dataset processing code
 ├── Datasets                                 datasets that have been processed
-├── all_models                                models 
+├── all_models                                models (our model and most of the baselines)
+├── other baselines                         DCRec, HTSR, SDHID
 ├── argparser.py                              argument definition
 ├── main_pro.py                               main script for the proposed method
 ├── data_loader.py                            data loader
@@ -44,14 +45,10 @@ This repo focuses on the debias problem of explicit feedback-based sequential re
 
 <!-- USAGE -->
 ## Usage
-Download datasets and run the following commands:
+To perfrom our proposed  method, please run the following command (Find details about the arguments in argparser.py) :
 ```commandline
 python main_pro.py --method pro --model GNN_rate --prefix GNN_rate_128_V2 --dataset "cd" --epoch 100 --bs 1024 --train train --latent_dim 128 --lr 0.001 --wd 0 --bar False --n_channels 2 --n_layers 1 --version 2
 ```
-```commandline
-python main_single.py --method trad --model MF_rate --prefix MF_rate_64 --dataset cd --epoch 100 --bs 1024 --train train --latent_dim 64    
-```
-Find details about the arguments in argparser.py 
 
 ## Raw Datasets
 Amazon datasets: CD, Movie, Sport, Music, Beauty (https://jmcauley.ucsd.edu/data/amazon/)
